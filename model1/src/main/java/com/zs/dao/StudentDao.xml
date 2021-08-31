@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    1. 约束文件
+    2. 名称空间：必须唯一，不能为空，推荐使用dao接口的全限定名称
+               作用：用于识别SQL语句
+-->
+<mapper namespace="com.zs.dao.StudentDao">
+
+    <!--
+        id：SQL语句标识符，推荐使用dao接口中的方法名称
+        resultType:返回值类型
+    -->
+    <select id="selectStudentById" resultType="com.zs.domain.Student">
+        select id,name,email,age from student where id=1
+    </select>
+</mapper>
+
+
+
